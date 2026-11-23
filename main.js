@@ -5,3 +5,12 @@ const grades = [
     { name: "Даша", score: 88 },
     { name: "Студент_X", score: 45 }
 ];
+
+// вычесление среднего
+function calculateAverage(data) {
+    let sum = 0;
+    for (let i = 0; i < data.length; i++) {
+        sum = sum + data[i].score;
+    }
+    return sum / data.length;
+}
