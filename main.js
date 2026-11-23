@@ -14,3 +14,13 @@ function calculateAverage(data) {
     }
     return sum / data.length;
 }
+// у кого больше всего баллов
+function findTopStudent(data) {
+    let topStudent = data[0];
+    for (let i = 1; i < data.length; i++) {
+        if (data[i].score > topStudent.score) {
+            topStudent = data[i];
+        }
+    }
+    return topStudent.name;
+}
