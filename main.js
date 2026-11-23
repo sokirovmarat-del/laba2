@@ -34,3 +34,21 @@ function filterFailed(data, passScore) {
     }
     return failedNames;
 }
+// оценка
+function addLetterGrade(data) {
+    let result = [];
+    for (let i = 0; i < data.length; i++) {
+        let student = data[i];
+        let letter = "";
+
+        if (student.score >= 90) {
+            letter = "A";
+        } else if (student.score >= 75) {
+            letter = "B";
+        } else {
+            letter = "C";
+        }
+        result.push({ name: student.name, score: student.score, letter: letter });
+    }
+    return result;
+}
