@@ -24,3 +24,13 @@ function findTopStudent(data) {
     }
     return topStudent.name;
 }
+// не сдавшие
+function filterFailed(data, passScore) {
+    let failedNames = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].score < passScore) {
+            failedNames.push(data[i].name);
+        }
+    }
+    return failedNames;
+}
