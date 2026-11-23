@@ -52,3 +52,20 @@ function addLetterGrade(data) {
     }
     return result;
 }
+
+// 1. Средний балл группы
+let avg = calculateAverage(grades);
+console.log("1. Средний балл группы: " + avg);
+
+// 2. Лучший студент
+let best = findTopStudent(grades);
+console.log("2. Лучший студент: " + best);
+
+// 3. Список должников (проходной балл 60)
+let failed = filterFailed(grades, 60);
+console.log("3. Список должников: " + failed);
+
+// 4. Итоговый массив с буквенными оценками
+let finalGrades = addLetterGrade(grades);
+console.log("4. Итоговый массив с оценками:");
+console.log(finalGrades);
